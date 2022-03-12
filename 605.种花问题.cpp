@@ -13,7 +13,7 @@ public:
         vector<int> bed = {1, 0};
         bed.insert(bed.end(), flowerbed.begin(), flowerbed.end());
         bed.push_back(0);
-        bed.push_back(1);
+        bed.push_back(1);                                                 // 避免判断边界条件
 
         count = 0;
         maxFlower = 0;
