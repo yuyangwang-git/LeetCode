@@ -23,12 +23,15 @@ public:
         vector<vector<int>> queue(people.size());
         sort(people.begin(), people.end(), compare);                           // ki相同的元素, 最终结果中必定按hi升序排列
 
-        queue[people[0][1]] = people[0];
-        for (int i = 1; i < people.size(); i++)
+        for (int i = 0; i < people.size(); i++)
         {
-
+            if (queue[people[i][1]][0] == -1)
+            {
+                queue[people[i][1]] = people[i];
+            }
+            
         }
-
+        
         return queue;
     }
 };
